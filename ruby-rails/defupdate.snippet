@@ -1,0 +1,14 @@
+def update
+  @<+model+> = <+Model+>.find(params[:id])
+
+  respond_to do |wants|
+    if @<+model+>.update_attributes(params[:<+model+>])
+      flash[:notice] = '<+Model+> was successfully updated.'
+      wants.html { redirect_to(@<+model+>) }
+      wants.xml  { head :ok }
+    else
+      wants.html { render :action => "edit" }
+      wants.xml  { render :xml => @<+model+>.errors, :status => :unprocessable_entity }
+    end
+  end
+end
