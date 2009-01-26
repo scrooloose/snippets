@@ -1,19 +1,19 @@
 "ruby {{{1
 function! Snippet_RubyClassNameFromFilename()
     let name = expand("%:t:r")
-    return NS_camelCase(name)
+    return NS_camelcase(name)
 endfunction
 
 function! Snippet_MigrationNameFromFilename()
     let name = substitute(expand("%:t:r"), '^.\{-}_', '', '')
-    return NS_camelCase(name)
+    return NS_camelcase(name)
 endfunction
 
 
 "python {{{1
 function! Snippet_PythonClassNameFromFilename()
     let name = expand("%:t:r")
-    return NS_camelCase(name)
+    return NS_camelcase(name)
 endfunction
 
 "php {{{1
